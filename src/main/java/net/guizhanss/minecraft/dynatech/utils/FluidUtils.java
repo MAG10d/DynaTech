@@ -10,8 +10,8 @@ public class FluidUtils {
     public static String getFluidType(@Nonnull String fluidName){
         return switch (fluidName) {
             case "WATER" -> "水";
-            case "LAVA" -> "岩浆";
-            case "NO_FLUID" -> "没有液体";
+            case "LAVA" -> "岩漿";
+            case "NO_FLUID" -> "沒有液體";
             default -> fluidName;
         };
     }

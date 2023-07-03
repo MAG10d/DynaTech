@@ -75,14 +75,14 @@ public class LiquidTank extends SlimefunItem implements NotPlaceable, Listener {
                 PersistentDataAPI.setInt(meta, FLUID_AMOUNT, fluidAmount + 1000);
 
                 List<String> lore = new ArrayList<>();
-                lore.add(ChatColor.GRAY + "简单的液体掠夺者");
+                lore.add(ChatColor.GRAY + "簡單的液體掠奪者");
                 lore.add("");
-                lore.add("右键点击装载液体");
-                lore.add("Shift + 右键点击倾倒液体");
+                lore.add("右鍵點擊裝載液體");
+                lore.add("Shift + 右鍵點擊傾倒液體");
                 lore.add("");
-                lore.add(ChatColor.WHITE + "液体类型: " + FluidUtils.getFluidType(PersistentDataAPI.getString(meta,
+                lore.add(ChatColor.WHITE + "液體類型: " + FluidUtils.getFluidType(PersistentDataAPI.getString(meta,
                     FLUID_NAME)));
-                lore.add(ChatColor.WHITE + "液体存量: " + PersistentDataAPI.getInt(meta, FLUID_AMOUNT));
+                lore.add(ChatColor.WHITE + "液體存量: " + PersistentDataAPI.getInt(meta, FLUID_AMOUNT));
                 meta.setLore(lore);
                 item.setItemMeta(meta);
                 DynaTech.runSync(() -> { block.setType(Material.AIR); });
@@ -111,14 +111,14 @@ public class LiquidTank extends SlimefunItem implements NotPlaceable, Listener {
                             PersistentDataAPI.setInt(meta, FLUID_AMOUNT, fluidAmount - 1000);
                             
                             List<String> lore = new ArrayList<>();
-                            lore.add(ChatColor.GRAY + "简单的液体掠夺者");
+                            lore.add(ChatColor.GRAY + "簡單的液體掠奪者");
                             lore.add("");
-                            lore.add("右键点击装载液体");
-                            lore.add("Shift + 右键点击倾倒液体");
+                            lore.add("右鍵點擊裝載液體");
+                            lore.add("Shift + 右鍵點擊傾倒液體");
                             lore.add("");
-                            lore.add(ChatColor.WHITE + "液体类型: " + FluidUtils.getFluidType(PersistentDataAPI.getString(meta,
+                            lore.add(ChatColor.WHITE + "液體類型: " + FluidUtils.getFluidType(PersistentDataAPI.getString(meta,
                                 FLUID_NAME)));
-                            lore.add(ChatColor.WHITE + "液体存量: " + PersistentDataAPI.getInt(meta, FLUID_AMOUNT));
+                            lore.add(ChatColor.WHITE + "液體存量: " + PersistentDataAPI.getInt(meta, FLUID_AMOUNT));
                             meta.setLore(lore);
                             item.setItemMeta(meta);
                             DynaTech.runSync(() -> { block.setType(mat); });
@@ -203,9 +203,9 @@ public class LiquidTank extends SlimefunItem implements NotPlaceable, Listener {
         }
 
         for (int i = 0; i < lore.size(); i++) {
-            if (lore.get(i).contains("存储液体: ")) {
+            if (lore.get(i).contains("儲存液體: ")) {
 
-                lore.set(i, ChatColor.WHITE + "存储液体: " + FluidUtils.getFluidType(fluidName));
+                lore.set(i, ChatColor.WHITE + "儲存液體: " + FluidUtils.getFluidType(fluidName));
             }
 
             if (lore.get(i).contains("容量: ")) {

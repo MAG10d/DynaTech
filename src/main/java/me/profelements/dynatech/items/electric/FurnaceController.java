@@ -63,4 +63,3 @@ public class FurnaceController extends AbstractElectricTicker {
         return machines;
     }
 }
-

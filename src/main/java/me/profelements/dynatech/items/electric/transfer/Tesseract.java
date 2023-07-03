@@ -51,7 +51,7 @@ public class Tesseract extends SlimefunItem implements EnergyNetProvider {
 
         addItemHandler(onBlockBreak());
 
-        new BlockMenuPreset("TESSERACT", "&6光学传输器") {
+        new BlockMenuPreset("TESSERACT", "&6光學傳輸器") {
 
             @Override
             public void init() {
@@ -208,8 +208,8 @@ public class Tesseract extends SlimefunItem implements EnergyNetProvider {
 
         lore.clear();
         lore.add(" ");
-        lore.add(ChatColor.WHITE + "电力: " + currentCharge + "J");
-        lore.add(ChatColor.GREEN + "已连接");
+        lore.add(ChatColor.WHITE + "電力: " + currentCharge + "J");
+        lore.add(ChatColor.GREEN + "已連接");
         knowledgePane.setType(Material.RED_STAINED_GLASS_PANE);
 
         im.setLore(lore);
@@ -221,7 +221,7 @@ public class Tesseract extends SlimefunItem implements EnergyNetProvider {
         preset.drawBackground(ChestMenuUtils.getBackground(), getBorder());
         preset.drawBackground(ChestMenuUtils.getInputSlotTexture(), getInputBorder());
         preset.drawBackground(ChestMenuUtils.getOutputSlotTexture(), getOutputBorder());
-        preset.addItem(4, new CustomItemStack(Material.PURPLE_STAINED_GLASS_PANE, "&b当前状态", "&f电力: 未知", "&c未连接"), ChestMenuUtils.getEmptyClickHandler());
+        preset.addItem(4, new CustomItemStack(Material.PURPLE_STAINED_GLASS_PANE, "&b當前狀態", "&f電力: 未知", "&c未連接"), ChestMenuUtils.getEmptyClickHandler());
     }
 
     public int[] getBorder() {
@@ -257,12 +257,12 @@ public class Tesseract extends SlimefunItem implements EnergyNetProvider {
         ItemMeta im = item.getItemMeta();
         List<String> lore = im.getLore();
         for (int i = 0; i < lore.size(); i++) {
-            if (lore.get(i).contains("绑定位置: ")) {
+            if (lore.get(i).contains("綁定位置: ")) {
                 lore.remove(i);
             } 
         }
 
-        lore.add(ChatColor.WHITE + "绑定位置: " + l.getWorld().getName() + " " + l.getBlockX() + " " + l.getBlockY() + " " + l.getBlockZ());
+        lore.add(ChatColor.WHITE + "綁定位置: " + l.getWorld().getName() + " " + l.getBlockX() + " " + l.getBlockY() + " " + l.getBlockZ());
 
         im.setLore(lore);
         item.setItemMeta(im);

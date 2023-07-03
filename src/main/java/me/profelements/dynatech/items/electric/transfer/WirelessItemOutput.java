@@ -59,7 +59,7 @@ public class WirelessItemOutput extends SlimefunItem implements EnergyNetCompone
 
         addItemHandler(onBlockBreak(), onBlockPlace(), onRightClick());
 
-        new BlockMenuPreset("WIRELESS_ITEM_OUTPUT", "&6无线物品输出节点") {
+        new BlockMenuPreset("WIRELESS_ITEM_OUTPUT", "&6無線物品輸出節點") {
 
             @Override
             public void init() {
@@ -221,8 +221,8 @@ public class WirelessItemOutput extends SlimefunItem implements EnergyNetCompone
 
         lore.clear();
         lore.add(" ");
-        lore.add(ChatColor.WHITE + "电力: " + currentCharge + "J");
-        lore.add(ChatColor.GREEN + "已连接");
+        lore.add(ChatColor.WHITE + "電力: " + currentCharge + "J");
+        lore.add(ChatColor.GREEN + "已連接");
         knowledgePane.setType(Material.RED_STAINED_GLASS_PANE);
 
         im.setLore(lore);
@@ -232,7 +232,7 @@ public class WirelessItemOutput extends SlimefunItem implements EnergyNetCompone
     //Boilerplate for machines.
     public void constructMenu(BlockMenuPreset preset) {
         preset.drawBackground(ChestMenuUtils.getOutputSlotTexture(), getBorder());
-        preset.addItem(4, new CustomItemStack(Material.PURPLE_STAINED_GLASS_PANE, "&b当前状态", "&f电力: 未知", "&c未连接"), ChestMenuUtils.getEmptyClickHandler());
+        preset.addItem(4, new CustomItemStack(Material.PURPLE_STAINED_GLASS_PANE, "&b當前狀態", "&f電力: 未知", "&c未連接"), ChestMenuUtils.getEmptyClickHandler());
     }
 
 
@@ -266,12 +266,12 @@ public class WirelessItemOutput extends SlimefunItem implements EnergyNetCompone
         ItemMeta im = item.getItemMeta();
         List<String> lore = im.getLore();
         for (int i = 0; i < lore.size(); i++) {
-            if (lore.get(i).contains("绑定位置: ")) {
+            if (lore.get(i).contains("綁定位置: ")) {
                 lore.remove(i);
             }
         }
 
-        lore.add(ChatColor.WHITE + "绑定位置: " + l.getWorld().getName() + " " + l.getBlockX() + " " + l.getBlockY() + " " + l.getBlockZ());
+        lore.add(ChatColor.WHITE + "綁定位置: " + l.getWorld().getName() + " " + l.getBlockX() + " " + l.getBlockY() + " " + l.getBlockZ());
 
         im.setLore(lore);
         item.setItemMeta(im);
@@ -288,9 +288,3 @@ public class WirelessItemOutput extends SlimefunItem implements EnergyNetCompone
     }
 
 }
-
-    
-
-    
-       
-        

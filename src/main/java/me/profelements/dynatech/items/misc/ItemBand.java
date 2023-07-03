@@ -50,7 +50,7 @@ public class ItemBand extends SlimefunItem {
             ItemMeta im = item.getItemMeta();
             List<String> lore = im.hasLore() ? im.getLore() : new ArrayList<>();
             
-            lore.add(ChatColor.WHITE + "物品模组效果: " + PotionEffectTypeHelper.getName(getPotionEffects()[0].getType()));
+            lore.add(ChatColor.WHITE + "物品模組效果: " + PotionEffectTypeHelper.getName(getPotionEffects()[0].getType()));
             PersistentDataAPI.setString(im, KEY, this.getId());
 
             im.setLore(lore);
@@ -68,7 +68,7 @@ public class ItemBand extends SlimefunItem {
             
             im.getPersistentDataContainer().remove(KEY);
 
-            lore.removeIf(line -> line.contains(ChatColor.WHITE + "物品模组效果: "));
+            lore.removeIf(line -> line.contains(ChatColor.WHITE + "物品模組效果: "));
     
             im.setLore(lore);
             item.setItemMeta(im);
