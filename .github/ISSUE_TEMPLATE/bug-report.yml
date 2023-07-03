@@ -1,5 +1,5 @@
-name: Bug汇报
-description: 反馈本插件的Bug或问题
+name: Bug匯報
+description: 回饋本插件的Bug或問題
 labels: ["bug"]
 assignees:
   - ybw0014
@@ -7,48 +7,48 @@ body:
   - type: markdown
     attributes:
       value: |
-        ## 欢迎来到 SlimefunGuguProject 的问题追踪器
-        你正在反馈 DynaTech 汉化版出现的 Bug。
-        任何意见，建议请前往[QQ群](https://ybw0014.net/go/sf-qgroup)进行反馈。
-        建议先阅读[这篇文章](https://slimefun-wiki.guizhanss.cn/How-to-report-bugs)了解如何正确地汇报Bug。
+        ## 歡迎來到 SlimefunGuguProject 的問題追蹤器
+        你正在回饋 DynaTech 漢化版出現的 Bug。
+        任何意見，建議請前往[QQ群](https://ybw0014.net/go/sf-qgroup)進行回饋。
+        建議先閱讀[這篇文章](https://slimefun-wiki.guizhanss.cn/How-to-report-bugs)了解如何正確地匯報Bug。
 
-        <strong><i>你必须填写标注为星号（*）的表单项</i></strong>
+        <strong><i>你必須填寫標註為星號（*）的表單項</i></strong>
 
   - type: checkboxes
     id: checklist
     attributes:
-      label: 检查项目
-      description: 在汇报之前，你需要确认
+      label: 檢查項目
+      description: 在匯報之前，你需要確認
       options:
-        - label: 你使用的是从构建站下载的版本 (https://builds.guizhanss.net)
+        - label: 你使用的是從構建站下載的版本 (https://builds.guizhanss.net)
           required: true
-        - label: 你已经检验过下载的文件的校验和，确认已完整下载文件 (暂未推出)
+        - label: 你已經檢驗過下載的文件的校驗和，確認已完整下載文件 (暫未推出)
           required: false
-        - label: 你没有对下载的文件内容进行任何更改
+        - label: 你沒有對下載的文件內容進行任何更改
           required: true
-        - label: 你没有安装`CS-CoreLib`
+        - label: 你沒有安裝`CS-CoreLib`
           required: true
-        - label: 你已经寻找过[已知问题列表](https://github.com/SlimefunGuguProject/DynaTech/issues)，且没有找到相同的问题
+        - label: 你已經尋找過[已知問題列表](https://github.com/SlimefunGuguProject/DynaTech/issues)，且沒有找到相同的問題
           required: true
 
   - type: textarea
     id: description
     attributes:
-      label: 问题描述
+      label: 問題描述
       description: |
-        详细描述你要汇报的问题
-        提供详细的信息能让我们更快地处理问题
-      placeholder: 只说"不能用"没法让开发者定位问题。
+        詳細描述你要匯報的問題
+        提供詳細的訊息能讓我們更快地處理問題
+      placeholder: 只說"不能用"沒辦法讓開發者定位問題。
     validations:
       required: true
 
   - type: textarea
     id: reproduction
     attributes:
-      label: 复现步骤
+      label: 復現步驟
       description: |
-        请详细描述如何才能复现该问题
-        如果有视频，请在此提供视频链接
+        請詳細描述如何才能復現該問題
+        如果有影片，請在此提供影片連結
       placeholder: |
         1. xxx
         2. xxx
@@ -58,20 +58,20 @@ body:
   - type: textarea
     id: expected-behavior
     attributes:
-      label: 预期行为
+      label: 預期行為
       description: |
-        你觉得应该发生什么
-        有时候，问题的原因是你误解了某个功能。
+        你覺得應該發生什麼事
+        有時候，問題的原因是你誤解了某個功能。
     validations:
       required: true
 
   - type: input
     id: server-log
     attributes:
-      label: 服务器日志
+      label: 伺服器日誌
       description: |
-        请查看服务器日志中是否包含任何报错，如果有请上传至 [https://paste.guizhanss.net/](https://paste.guizhanss.net/) 并在此填入链接。
-        **不要直接在这里粘贴日志**
+        請查看伺服器日誌中是否包含任何報錯，如果有請上傳至 [https://paste.guizhanss.net/](https://paste.guizhanss.net/) 並在此填入連結。
+        **不要直接在這裡黏貼日誌**
       placeholder: https://paste.guizhanss.net/...
     validations:
       required: false
@@ -79,11 +79,11 @@ body:
   - type: input
     id: error-report
     attributes:
-      label: 错误报告
+      label: 錯誤報告
       description: |
-        如果服务器日志中提到了`/plugins/Slimefun/error-reports`中的文件（即错误报告）
-        请上传至 [https://paste.guizhanss.net/](https://paste.guizhanss.net/) 并在此填入链接。
-        **不要直接在这里粘贴错误报告**
+        如果伺服器日誌中提到了`/plugins/Slimefun/error-reports`中的文件（即錯誤報告）
+        請上傳至 [https://paste.guizhanss.net/](https://paste.guizhanss.net/) 並在此填入連結。
+        **不要直接在這裡黏貼錯誤報告**
       placeholder: https://paste.guizhanss.net/...
     validations:
       required: false
@@ -91,14 +91,14 @@ body:
   - type: dropdown
     id: server-software
     attributes:
-      label: 服务端软件
-      description: 请选择你服务端所使用的软件
+      label: 服務端軟體
+      description: 請選擇你服務端所使用的軟體
       options:
         - Spigot
         - Paper
         - Purpur
         - Airplane
-        - 其他 (请在问题描述里写明)
+        - 其他 (請在問題描述裡寫明)
     validations:
       required: true
 
@@ -107,7 +107,7 @@ body:
     attributes:
       label: Minecraft版本
       description: |
-        请填写Minecraft版本
+        請填寫Minecraft版本
     validations:
         required: true
 
@@ -116,10 +116,10 @@ body:
     attributes:
       label: CS-CoreLib 版本
       description: |
-        从2021年1月30日起，Slimefun以及其附属插件都不再需要安装CS-CoreLib。
-        保留CS-CoreLib可能导致一些未知的问题。
+        從2021年1月30日起，Slimefun以及其附屬插件都不再需要安裝CS-CoreLib。
+        保留CS-CoreLib可能導致一些未知的問題。
       options:
-        - label: 我没有安装CS-CoreLib
+        - label: 我沒有安裝CS-CoreLib
           required: true
 
   - type: textarea
@@ -127,9 +127,9 @@ body:
     attributes:
       label: Slimefun版本
       description: |
-        请填写Slimefun版本
+        請填寫Slimefun版本
         (例如 v4.9-canary-08120db)
-        如果你有管理员权限，建议运行`/sf versions`指令，截图并在此上传指令输出的**所有内容**。
+        如果你有管理員權限，建議運行`/sf versions`指令，截圖並在此上傳指令輸出的**所有內容**。
     validations:
       required: true
 
@@ -138,8 +138,8 @@ body:
     attributes:
       label: 插件版本
       description: |
-        请填写插件版本
-        只需填写Build后面的数字版本即可
-        (`Build 7 zh-CN(ybw0014) (git 9ef7fee)`只需填写`7`即可)
+        請填寫插件版本
+        只需填寫Build後面的數字版本即可
+        (`Build 7 zh-CN(ybw0014) (git 9ef7fee)`只需填寫`7`即可)
     validations:
       required: true
